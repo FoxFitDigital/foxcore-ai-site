@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FoxCore AI — Compare AI Tools &amp; Software | Independent Reviews</title>
+<meta name="description" content="FoxCore AI helps you choose the right software. Independent comparisons of AI writing tools, VPNs, productivity apps and more. No fluff, just facts.">
+<meta property="og:title" content="FoxCore AI — Independent Software Comparisons">
+<meta property="og:description" content="Compare AI tools, VPNs and software with honest, research-backed reviews.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://foxcore.ai">
+<link rel="canonical" href="https://foxcore.ai/">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{--bg:#0D0F1A;--surface:#151829;--border:#1E2235;--blue:#0A7AFF;--teal:#06D6A0;--text:#E8EAF0;--muted:#8B90A8;--white:#FFFFFF}
+  body{background:var(--bg);color:var(--text);font-family:'Space Grotesk',system-ui,sans-serif;line-height:1.6}
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+  a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
+  .container{max-width:1100px;margin:0 auto;padding:0 24px}
+  /* NAV */
+  nav{border-bottom:1px solid var(--border);padding:16px 0}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between}
+  .logo{font-size:1.25rem;font-weight:700;color:var(--white);letter-spacing:-0.02em}
+  .logo span{color:var(--blue)}
+  .nav-links{display:flex;gap:24px;font-size:0.9rem;color:var(--muted)}
+  .nav-links a{color:var(--muted)}
+  .nav-links a:hover{color:var(--text)}
+  /* HERO */
+  .hero{padding:80px 0 60px;text-align:center}
+  .hero h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:700;line-height:1.15;letter-spacing:-0.03em;margin-bottom:20px}
+  .hero h1 em{font-style:normal;background:linear-gradient(135deg,var(--blue),var(--teal));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+  .hero p{font-size:1.15rem;color:var(--muted);max-width:560px;margin:0 auto 36px}
+  .badge{display:inline-block;background:rgba(10,122,255,0.12);color:var(--blue);border:1px solid rgba(10,122,255,0.3);padding:4px 14px;border-radius:20px;font-size:0.8rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:24px}
+  /* DISCLOSURE */
+  .disclosure{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:8px;padding:12px 16px;font-size:0.8rem;color:var(--muted);text-align:center;margin-bottom:48px}
+  /* CATEGORIES */
+  .section-title{font-size:1.5rem;font-weight:700;margin-bottom:8px}
+  .section-sub{color:var(--muted);margin-bottom:32px;font-size:0.95rem}
+  .categories{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-bottom:64px}
+  .category-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:28px;transition:border-color 0.2s}
+  .category-card:hover{border-color:var(--blue)}
+  .cat-icon{font-size:2rem;margin-bottom:14px}
+  .cat-title{font-size:1.1rem;font-weight:600;margin-bottom:8px}
+  .cat-desc{font-size:0.88rem;color:var(--muted);margin-bottom:16px;line-height:1.5}
+  .cat-count{font-size:0.8rem;color:var(--teal);font-weight:500}
+  /* FEATURED */
+  .featured-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;margin-bottom:64px}
+  .compare-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:border-color 0.2s;display:flex;flex-direction:column}
+  .compare-card:hover{border-color:var(--blue)}
+  .compare-card.live:hover{border-color:var(--teal)}
+  .card-header{padding:24px 24px 0;display:flex;align-items:center;gap:12px}
+  .live-badge{display:inline-block;background:rgba(6,214,160,0.12);color:var(--teal);border:1px solid rgba(6,214,160,0.3);padding:2px 10px;border-radius:20px;font-size:0.7rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase}
+  .soon-badge{display:inline-block;background:rgba(139,144,168,0.12);color:var(--muted);border:1px solid rgba(139,144,168,0.2);padding:2px 10px;border-radius:20px;font-size:0.7rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase}
+  .card-body{padding:16px 24px 24px;flex:1;display:flex;flex-direction:column}
+  .card-title{font-size:1.05rem;font-weight:600;margin-bottom:8px}
+  .card-desc{font-size:0.87rem;color:var(--muted);margin-bottom:20px;flex:1;line-height:1.5}
+  .card-meta{font-size:0.8rem;color:var(--muted);margin-bottom:16px}
+  .btn{display:inline-block;padding:10px 20px;border-radius:8px;font-size:0.9rem;font-weight:600;transition:all 0.2s;text-align:center}
+  .btn-primary{background:var(--blue);color:var(--white)}
+  .btn-primary:hover{background:#0969da;text-decoration:none}
+  .btn-ghost{background:transparent;color:var(--muted);border:1px solid var(--border)}
+  .btn-ghost:hover{color:var(--text);border-color:var(--muted);text-decoration:none}
+  /* PROMISE */
+  .promise{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:40px;margin-bottom:64px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:28px;text-align:center}
+  .promise-item h3{font-size:1rem;font-weight:600;margin-bottom:6px}
+  .promise-item p{font-size:0.85rem;color:var(--muted)}
+  .promise-icon{font-size:1.5rem;margin-bottom:10px}
+  /* FOOTER */
+  footer{border-top:1px solid var(--border);padding:32px 0;text-align:center;color:var(--muted);font-size:0.85rem}
+  footer a{color:var(--muted)}
+  footer .links{display:flex;gap:20px;justify-content:center;margin-bottom:12px;flex-wrap:wrap}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"FoxCore AI","url":"https://foxcore.ai","description":"Independent comparisons of AI tools and software","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://foxcore.ai/search?q={search_term_string}"},"query-input":"required name=search_term_string"}}
+</script>
+</head>
+<body>
+<nav>
+  <div class="container">
+    <div class="nav-inner">
+      <div class="logo">FoxCore<span>AI</span></div>
+      <div class="nav-links">
+        <a href="/compare/">Comparisons</a>
+        <a href="/best/">Best Of</a>
+        <a href="/vpn/">VPN &amp; Privacy</a>
+      </div>
+    </div>
+  </div>
+</nav>
+<main>
+  <div class="container">
+    <section class="hero">
+      <div class="badge">Independent Reviews</div>
+      <h1>Compare Software.<br><em>Spend Smarter.</em></h1>
+      <p>Honest, research-backed comparisons of AI tools, VPNs and productivity software. We test so you do not have to.</p>
+    </section>
+    <div class="disclosure">This site contains affiliate links. If you purchase through our links, we may earn a commission at no extra cost to you. This never influences our reviews &mdash; we only recommend tools we would use ourselves.</div>
+    <div>
+      <div class="section-title">Browse by Category</div>
+      <div class="section-sub">Find the right tool for your needs.</div>
+      <div class="categories">
+        <div class="category-card">
+          <div class="cat-icon">✍️</div>
+          <div class="cat-title">AI Writing Tools</div>
+          <div class="cat-desc">Compare Grammarly, Jasper, Copy.ai and more. Find the AI writer that fits your workflow and budget.</div>
+          <div class="cat-count">2 comparisons available</div>
+        </div>
+        <div class="category-card">
+          <div class="cat-icon">🔒</div>
+          <div class="cat-title">VPN &amp; Privacy</div>
+          <div class="cat-desc">NordVPN, PureVPN, ExpressVPN and more. Independent VPN testing focused on UK users.</div>
+          <a href="/compare/nordvpn-vs-purevpn/" class="cat-count" style="color:var(--teal);">1 comparison live now</a>
+        </div>
+        <div class="category-card">
+          <div class="cat-icon">⚡</div>
+          <div class="cat-title">AI Productivity</div>
+          <div class="cat-desc">Notion AI, Otter.ai, HubSpot AI and more. Tools that save time and reduce busywork.</div>
+          <div class="cat-count">Coming soon</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="section-title">Latest Comparisons</div>
+      <div class="section-sub">Updated for 2026 — current pricing, real testing, honest verdicts.</div>
+      <div class="featured-grid">
+        <div class="compare-card live">
+          <div class="card-header"><span class="live-badge">Live</span></div>
+          <div class="card-body">
+            <div class="card-title">NordVPN vs PureVPN 2026</div>
+            <div class="card-desc">Two of the most popular VPNs in the UK go head to head. We compare pricing, speed, security and UK server performance to find the winner.</div>
+            <div class="card-meta">VPN &amp; Privacy &bull; Updated May 2026</div>
+            <a href="/compare/nordvpn-vs-purevpn/" class="btn btn-primary">Read Comparison</a>
+          </div>
+        </div>
+        <div class="compare-card">
+          <div class="card-header"><span class="soon-badge">Coming Soon</span></div>
+          <div class="card-body">
+            <div class="card-title">Best AI Writing Tools 2026</div>
+            <div class="card-desc">Grammarly, Jasper, Copy.ai and Writesonic ranked and reviewed. We test writing quality, pricing, and features so you can pick the right tool.</div>
+            <div class="card-meta">AI Writing &bull; In preparation</div>
+            <span class="btn btn-ghost">Notify Me</span>
+          </div>
+        </div>
+        <div class="compare-card">
+          <div class="card-header"><span class="soon-badge">Coming Soon</span></div>
+          <div class="card-body">
+            <div class="card-title">Grammarly vs Jasper 2026</div>
+            <div class="card-desc">Head-to-head: the most popular AI grammar checker vs the leading long-form AI writer. Which one is worth paying for in 2026?</div>
+            <div class="card-meta">AI Writing &bull; In preparation</div>
+            <span class="btn btn-ghost">Notify Me</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="promise">
+      <div class="promise-item"><div class="promise-icon">🔬</div><h3>Research-Backed</h3><p>Every comparison is built on verified data, current pricing and real-world testing.</p></div>
+      <div class="promise-item"><div class="promise-icon">💷</div><h3>UK-Focused</h3><p>Pricing in pounds. VAT considered. UK server performance tested where relevant.</p></div>
+      <div class="promise-item"><div class="promise-icon">🚫</div><h3>No Paid Placements</h3><p>We earn affiliate commissions only. No tool pays to rank higher in our comparisons.</p></div>
+      <div class="promise-item"><div class="promise-icon">📅</div><h3>Kept Current</h3><p>Comparisons are reviewed and updated when pricing or features change.</p></div>
+    </div>
+  </div>
+</main>
+<footer>
+  <div class="container">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/compare/">Comparisons</a>
+      <a href="/best/">Best Of</a>
+      <a href="/vpn/">VPN &amp; Privacy</a>
+      <a href="/affiliate-disclosure/">Affiliate Disclosure</a>
+      <a href="/privacy/">Privacy Policy</a>
+    </div>
+    <p>&copy; 2026 FoxCore AI. Part of <a href="https://foxfitdigital.com">FoxFit Digital</a>. All rights reserved.<br>
+    This site contains affiliate links. We may earn a commission if you purchase through our links, at no extra cost to you.</p>
+  </div>
+</footer>
+</body>
+</html>
